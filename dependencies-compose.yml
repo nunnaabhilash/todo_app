@@ -1,0 +1,8 @@
+version: '2'
+services:
+  mongo1:
+    image: mongo:5.0.13
+    hostname: mongo1
+    container_name: feedback_container_mongo
+    ports:
+      - "27017:27017"
