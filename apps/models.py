@@ -16,7 +16,7 @@ class ToDoItem(models.Model):
     title = models.CharField(max_length=20)
     description = models.TextField()
     status = models.TextField(choices=ToDoStatus.choices, default=ToDoStatus.OPEN)
-    tag = models.CharField(max_length=10)
+    tags = models.CharField(max_length=10)
     dueDate = models.DateTimeField()
     createdAt = models.DateTimeField()
     

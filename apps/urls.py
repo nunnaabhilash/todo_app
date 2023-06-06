@@ -1,8 +1,10 @@
+from django.contrib import admin
 from django.urls import path
 from .views import CreateToDoItemView, ReadToDoItemsView, ReadToDoItemView, UpdateToDoItemView, DeleteToDoItemView
 from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
+    path("admin/", admin.site.urls),
     path("todo_item/create/", CreateToDoItemView.as_view()),
     path('todo_item/read/', ReadToDoItemsView.as_view()),
     path('todo_item/read/<str:id>/', ReadToDoItemView.as_view()),
